@@ -1,0 +1,127 @@
+a {
+  color: rgba(255, 215, 0, 1);
+}
+
+/* Style the sidebar - fixed full height */
+.sidebar {
+  height: 100%;
+  position: fixed;
+  z-index: 0;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  max-width: 200px;
+  background: rgba(255, 215, 0, 1);
+}
+
+/* Style sidebar links */
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 1);
+  display: block;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Style the main content */
+.main {
+  margin-left: 160px; /* Same as the width of the sidenav */
+  margin-top: 20px;
+  padding: 0px 10px;
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: -8px 8px 5px #b3b1b1;
+}
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {
+    padding-top: 15px;
+  }
+}
+
+.navfoot {
+  display: none;
+}
+
+.w3 {
+  background: rgba(0, 0, 150, 1);
+}
+body {
+  background: rgba(0, 0, 150, 1);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol {
+  color: rgba(255, 255, 255, 1);
+  text-align: center;
+}
+.yellow-background {
+  background-color: rgba(255, 215, 0, 1);
+  border-radius: 7px;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+.hidden {
+  display: none;
+}
+
+ul,
+ol {
+  text-align: left;
+}
+
+.box {
+  display: flex;
+  flex: wrap;
+  background-color: rgba(255, 215, 0, 1);
+  padding: 7px;
+  border-radius: 7px;
+  margin-bottom: 8px;
+}
+
+.recipeimage {
+  max-width: 90%;
+  max-height: 65vh;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.button {
+  color: white;
+}
+
+#javalert {
+  position: fixed;
+  width: 50%;
+  top: 25%;
+  left: 25%;
+  background-color: red;
+  padding: 10px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 50, 1);
+}
+
+.button:hover {
+  background-color: rgba(255, 215, 0, 1) !important;
+  border-radius: 8px;
+}
+
+.closebutton:hover {
+  background-color: rgba(0, 0, 255, 1) !important;
+  border-radius: 8px;
+  color: white !important;
+}

@@ -1,0 +1,63 @@
+<!-- Page Content -->
+<div class="w3">
+  <button class="w3-button w3-xlarge button" onclick="w3_open()">☰</button>
+  <div class="w3-container">
+    <h1 class="yellow-background">Recipes</h1>
+  </div>
+</div>
+
+<div class="w3-container">
+  <p>Please click on the recipe Mrs Brown specifies.</p>
+  
+  <div id="recipes" style="width:50%;min-width:300px;margin:auto;">
+    
+  </div>
+  
+</div>
+<script>
+    var recipes = {
+      "Pita Chips": "pitachips",
+      "Easy Chicken Tortillas": "tortillas",
+      "Mac and Cheese": "macncheese",
+      "Apple Turnovers": "appleturnovers",
+      "Chocolate Mug Cake": "chocmugcake",
+      "White Chocolate Fudge": "whitechocfudge",
+      "Chocolate Crunch Slice": "choccrunchslice",
+      "Double Chocolate Cookies": "doublechoccookies",
+      "Simple Tomato Sauce": "tomatosauce",
+      "Spaghetti Bread Baskets": "spagbreadbaskets",
+      "Pikelets": "pikelets",
+      "Pizza Bread": "pizzabread",
+      "Mini Pita Pizzas": "minipitapizzas",
+      "Mini Doughnut Muffins": "minidoughnutmuffins"
+  };
+  
+  const customrecipes = Object.keys(recipes).sort().reduce(
+  (obj, key) => { 
+    obj[key] = recipes[key]; 
+    return obj;
+  }, 
+  {}
+  );
+  
+  for(let i = 0; i < Object.keys(customrecipes).length; i++){
+  var name = Object.getOwnPropertyNames(customrecipes)[i];
+  var code = customrecipes[name];
+  document.getElementById("recipes").innerHTML =
+  document.getElementById("recipes").innerHTML +
+  `
+  <a href="/recipes/${code}.html">
+    <div class="box">
+      <img
+        style="width: 50px; height: 50px"
+        src="https://bbi-dev.github.io/data/bbifoodtech/recipes/${code}.jpg"
+      />
+      <p style="margin-left: 5px">${name}</p>
+    </div>
+  </a>
+  `
+  ;
+  }
+   
+  
+</script>
